@@ -11,8 +11,8 @@ export const constant = {
   // MEDIA_URL: "http://localhost:4040/api/v1/media",
 
   // ------------ production -------------------------//
-  API_URL: "https:api.prayasheducation.com/api/v1",
-  MEDIA_URL: "https:api.prayasheducation.com/api/v1",
+  API_URL: "https://api.prayasheducation.com/api/v1",
+  MEDIA_URL: "https://api.prayasheducation.com/api/v1",
 };
 
 export default constant;
