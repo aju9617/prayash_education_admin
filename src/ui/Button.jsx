@@ -7,7 +7,7 @@ function Button({ children, className = "", requesting, ...props }) {
       className={`bg-secondary w-max p-2 px-6 text-sm text-white rounded-full ${className}`}
       {...props}
     >
-      {children}
+      {requesting ? "Please wait..." : children}
     </button>
   );
 }
