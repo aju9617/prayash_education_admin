@@ -5,10 +5,11 @@ import { IoMdAnalytics, IoMdFootball } from "react-icons/io";
 import { IoNewspaper } from "react-icons/io5";
 import { HiReceiptTax } from "react-icons/hi";
 import { BsStarFill } from "react-icons/bs";
-import { FaGraduationCap } from "react-icons/fa";
+
+import { FaGraduationCap, FaUserGraduate, FaUniversity } from "react-icons/fa";
 import { RiComputerFill } from "react-icons/ri";
 let routes = [
-  { path: "/dashboard", title: "Dashboard", icon: MdDashboard, submenu: [] },
+  // { path: "/dashboard", title: "Dashboard", icon: MdDashboard, submenu: [] },
   {
     path: "/scholarships",
     title: "Scholarship",
@@ -22,9 +23,15 @@ let routes = [
     submenu: [],
   },
   {
+    path: "/admission-list",
+    title: "Admission Form",
+    icon: FaUserGraduate,
+    submenu: [],
+  },
+  {
     path: "/school-list",
     title: "Registered School",
-    icon: FaGraduationCap,
+    icon: FaUniversity,
     submenu: [],
   },
   // {

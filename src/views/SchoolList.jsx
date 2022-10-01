@@ -15,7 +15,7 @@ function TableData({ school }) {
 }
 
 function SchoolList() {
-  const [fetching, setFetching] = useState(false);
+  const [fetching, setFetching] = useState(true);
   const [list, setList] = useState([]);
 
   React.useEffect(() => {
@@ -23,7 +23,6 @@ function SchoolList() {
       setFetching(true);
       const res = await schoolService.getList();
       if (res.status) {
-        console.log(res.data);
         setList(res.data);
       }
       setFetching(false);

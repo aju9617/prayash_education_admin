@@ -211,7 +211,7 @@ function LoginForm() {
       setToken(res.data.tokens.access.token);
       authData.updateUser(res.data.user);
       localStorage.setItem("remember_me", e.rememberMe);
-      history.push({ pathname: "/dashboard" });
+      history.push({ pathname: "/scholarships" });
     }
   }
   return (
