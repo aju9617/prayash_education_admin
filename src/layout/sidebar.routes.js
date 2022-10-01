@@ -21,6 +21,12 @@ let routes = [
     icon: RiComputerFill,
     submenu: [],
   },
+  {
+    path: "/school-list",
+    title: "Registered School",
+    icon: FaGraduationCap,
+    submenu: [],
+  },
   // {
   //   path: "/students",
   //   title: "Student",
