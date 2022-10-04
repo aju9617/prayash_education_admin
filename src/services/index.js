@@ -5,6 +5,9 @@ import * as jobApplicantService from "./jobApplicant.service";
 import * as scholarshipApplicantService from "./scholarshipApplicant.service";
 import * as chargesService from "./charges.service";
 import * as studentPremierLeague from "./studentPremierLeague.service";
+import * as notificationService from "./notification.service";
+import * as meritListService from "./meritList.service";
+import * as resultService from "./result.service";
 
 export {
   chargesService,
@@ -14,4 +17,7 @@ export {
   jobApplicantService,
   scholarshipApplicantService,
   studentPremierLeague,
+  notificationService,
+  meritListService,
+  resultService,
 };

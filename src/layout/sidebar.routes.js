@@ -1,11 +1,11 @@
 import { MdDashboard, MdSecurity } from "react-icons/md";
 import { AiFillDollarCircle, AiFillSetting } from "react-icons/ai";
 import { IoFastFoodSharp, IoDocumentText } from "react-icons/io5";
-import { IoMdAnalytics, IoMdFootball } from "react-icons/io";
+import { IoMdAnalytics, IoMdFootball, IoMdNotifications } from "react-icons/io";
 import { IoNewspaper } from "react-icons/io5";
 import { HiReceiptTax } from "react-icons/hi";
 import { BsStarFill } from "react-icons/bs";
-
+import { GiPodiumWinner } from "react-icons/gi";
 import { FaGraduationCap, FaUserGraduate, FaUniversity } from "react-icons/fa";
 import { RiComputerFill } from "react-icons/ri";
 let routes = [
@@ -38,6 +38,24 @@ let routes = [
     path: "/school-list",
     title: "Registered School",
     icon: FaUniversity,
+    submenu: [],
+  },
+  {
+    path: "/merit-list",
+    title: "Merit List",
+    icon: GiPodiumWinner,
+    submenu: [],
+  },
+  {
+    path: "/result",
+    title: "Result",
+    icon: FaUniversity,
+    submenu: [],
+  },
+  {
+    path: "/notification",
+    title: "Notification",
+    icon: IoMdNotifications,
     submenu: [],
   },
   // {

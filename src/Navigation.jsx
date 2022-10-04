@@ -7,6 +7,9 @@ import JobApplicant from "./views/JobApplicant";
 import ScholarshipApplicant from "./views/ScholarshipApplicant";
 import Setting from "@views/Setting";
 import StudentPremierLeague from "@views/StudentPremierLeague";
+import Notification from "@views/Notification";
+import MeritList from "@views/MeritList";
+import Result from "@views/Result";
 
 function Navigation() {
   return (
@@ -17,6 +20,9 @@ function Navigation() {
         <Route component={JobApplicant} path="/job-applicants" />
         <Route component={ScholarshipApplicant} path="/scholarships" />
         <Route component={StudentPremierLeague} path="/premier-league" />
+        <Route component={Notification} path="/notification" />
+        <Route component={MeritList} path="/merit-list" />
+        <Route component={Result} path="/result" />
         <Route component={Setting} path="/setting" />
       </Switch>
     </DashboardWrapper>

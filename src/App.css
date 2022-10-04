@@ -30,6 +30,28 @@
   border-radius: 50%;
 }
 
+.blink {
+  animation: blinking 0.5s infinite;
+}
+
+@keyframes blinking {
+  0% {
+    color: #ffa200;
+  }
+  47% {
+    color: #ff6600;
+  }
+  62% {
+    color: transparent;
+  }
+  97% {
+    color: transparent;
+  }
+  100% {
+    color: #ff6600;
+  }
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);

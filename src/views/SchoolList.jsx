@@ -66,9 +66,9 @@ function SchoolList() {
               </tr>
             </thead>
             <tbody className=" text-sm ">
-              {list.map((school) => (
+              {/* {list.map((school) => (
                 <TableData school={school} key={school.id} />
-              ))}
+              ))} */}
             </tbody>
           </table>
         </>
