@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { schoolService } from "@services";
+import { RiFolderDownloadFill } from "react-icons/ri";
 
 function TableData({ school }) {
   return (
@@ -33,8 +34,14 @@ function SchoolList() {
   return (
     <div>
       <div className="mb-6">
-        <h2 className="text-xl font-medium text-gray-700 mb-2">
-          Registered School
+        <h2 className="text-xl flex items-center justify-between font-medium text-gray-700 mb-2">
+          Registered School{" "}
+          <button
+            onClick={schoolService.downloadExcel}
+            className="flex-center space-x-2 text-[16px]"
+          >
+            <span>Download</span> <RiFolderDownloadFill size={24} />
+          </button>
         </h2>
       </div>
       {fetching ? (

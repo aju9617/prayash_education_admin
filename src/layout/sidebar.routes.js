@@ -29,6 +29,12 @@ let routes = [
     submenu: [],
   },
   {
+    path: "/premier-league",
+    title: "Student Premier League",
+    icon: IoNewspaper,
+    submenu: [],
+  },
+  {
     path: "/school-list",
     title: "Registered School",
     icon: FaUniversity,

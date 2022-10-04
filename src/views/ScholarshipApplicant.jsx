@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { RiFolderDownloadFill } from "react-icons/ri";
 import { scholarshipApplicantService } from "@services";
 import moment from "moment";
 
@@ -64,8 +65,14 @@ function ScholarshipApplicant() {
   return (
     <div className=" ">
       <div className="mb-6">
-        <h2 className="text-xl font-medium text-gray-700 mb-2">
-          Scholarship Applicant
+        <h2 className="text-xl flex items-center justify-between  font-medium text-gray-700 mb-2">
+          Scholarship Applicant{" "}
+          <button
+            onClick={scholarshipApplicantService.downloadExcel}
+            className="flex-center space-x-2 text-[16px]"
+          >
+            <span>Download</span> <RiFolderDownloadFill size={24} />
+          </button>
         </h2>
       </div>
       {fetching ? (

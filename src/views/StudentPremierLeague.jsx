@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { admissionService } from "@services";
+import { studentPremierLeague } from "@services";
 import { RiFolderDownloadFill } from "react-icons/ri";
 
 function TableData({ student }) {
@@ -10,9 +10,6 @@ function TableData({ student }) {
           {student.studentName}
         </td>
         <td className="p-2 px-4 whitespace-nowrap capitalize">
-          {student.motherName}
-        </td>
-        <td className="p-2 px-4 whitespace-nowrap capitalize">
           {student.fatherName}
         </td>
         <td className="p-2 px-4 whitespace-nowrap">{student.email}</td>
@@ -20,7 +17,6 @@ function TableData({ student }) {
         <td className="p-2 px-4 whitespace-nowrap capitalize">
           {student.category}
         </td>
-        <td className="p-2 px-4 whitespace-nowrap">{student.aadharNumber}</td>
         <td className="p-2 px-4 whitespace-nowrap">{student.class}</td>
         <td className="p-2 px-4 whitespace-nowrap">
           {student.paymentStatus ? (
@@ -38,14 +34,14 @@ function TableData({ student }) {
   );
 }
 
-function AdmissionList() {
+function StudentPremierLeague() {
   const [fetching, setFetching] = useState(true);
   const [list, setList] = useState([]);
 
   React.useEffect(() => {
     async function fetch() {
       setFetching(true);
-      const res = await admissionService.getList();
+      const res = await studentPremierLeague.getList();
       if (res.status) {
         setList(res.data);
         console.log(res.data);
@@ -59,9 +55,9 @@ function AdmissionList() {
     <div>
       <div className="mb-6">
         <h2 className="text-xl flex items-center justify-between  font-medium text-gray-700 mb-2">
-          Admission Form{" "}
+          Student Premier League
           <button
-            onClick={admissionService.downloadExcel}
+            onClick={studentPremierLeague.downloadExcel}
             className="flex-center space-x-2 text-[16px]"
           >
             <span>Download</span> <RiFolderDownloadFill size={24} />
@@ -84,12 +80,10 @@ function AdmissionList() {
             <thead>
               <tr className="text-sm  !font-medium bg-primary text-white">
                 <td className="p-2 px-4 whitespace-nowrap">Name</td>
-                <td className="p-2 px-4 whitespace-nowrap">Mother Name</td>
                 <td className="p-2 px-4 whitespace-nowrap">Father Name</td>
                 <td className="p-2 px-4 whitespace-nowrap">Email</td>
                 <td className="p-2 px-4 whitespace-nowrap">Phone</td>
                 <td className="p-2 px-4 whitespace-nowrap">Category</td>
-                <td className="p-2 px-4 whitespace-nowrap">Aadhar</td>
                 <td className="p-2 px-4 whitespace-nowrap">Class</td>
                 <td className="p-2 px-4 whitespace-nowrap">Payment Status</td>
               </tr>
@@ -106,4 +100,4 @@ function AdmissionList() {
   );
 }
 
-export default AdmissionList;
+export default StudentPremierLeague;
