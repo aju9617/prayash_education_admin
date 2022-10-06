@@ -8,7 +8,7 @@ import * as studentPremierLeague from "./studentPremierLeague.service";
 import * as notificationService from "./notification.service";
 import * as meritListService from "./meritList.service";
 import * as resultService from "./result.service";
-
+import * as admitCardService from "./admitCard.service";
 export {
   chargesService,
   authService,
@@ -20,4 +20,5 @@ export {
   notificationService,
   meritListService,
   resultService,
+  admitCardService,
 };

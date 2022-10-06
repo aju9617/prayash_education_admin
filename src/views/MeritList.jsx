@@ -71,6 +71,7 @@ function MeritList() {
           className="hidden"
           type="file"
           id="merit_uploader"
+          accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         />
         <p className="text-xs mt-1">
           * Please upload merit list file in .xlsx format only

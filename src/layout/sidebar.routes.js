@@ -6,7 +6,12 @@ import { IoNewspaper } from "react-icons/io5";
 import { HiReceiptTax } from "react-icons/hi";
 import { BsStarFill } from "react-icons/bs";
 import { GiPodiumWinner } from "react-icons/gi";
-import { FaGraduationCap, FaUserGraduate, FaUniversity } from "react-icons/fa";
+import {
+  FaGraduationCap,
+  FaUserGraduate,
+  FaUniversity,
+  FaAddressCard,
+} from "react-icons/fa";
 import { RiComputerFill } from "react-icons/ri";
 let routes = [
   // { path: "/dashboard", title: "Dashboard", icon: MdDashboard, submenu: [] },
@@ -50,6 +55,12 @@ let routes = [
     path: "/result",
     title: "Result",
     icon: FaUniversity,
+    submenu: [],
+  },
+  {
+    path: "/admit-card",
+    title: "Admit Card",
+    icon: FaAddressCard,
     submenu: [],
   },
   {

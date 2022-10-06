@@ -1,25 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { RiFileExcel2Fill } from "react-icons/ri";
-import { resultService } from "@services";
+import { admitCardService } from "@services";
 import toast from "react-hot-toast";
 
-function Result() {
+function AdmitCard() {
   let currentYear = new Date().getFullYear();
   const [academicYear, setAcademicYear] = useState(currentYear);
   const [file, setFile] = useState(null);
+  const [uploading, setUploading] = useState(false);
 
   useEffect(() => {
     const uploader = async () => {
       if (file) {
         console.log(file);
+        setUploading(true);
         const formData = new FormData();
-        formData.append("resultList", file);
-        const res = await resultService.uploadList(formData);
-        setFile(null);
+        formData.append("admitCard", file);
+        const res = await admitCardService.uploadList(formData);
 
         if (res.status) {
           toast.success(res.message);
         }
+        setFile(null);
+        setUploading(false);
       }
     };
     uploader();
@@ -28,7 +31,7 @@ function Result() {
   return (
     <div>
       <h2 className="text-xl flex items-center justify-between  font-medium text-gray-700 mb-2">
-        Upload Result
+        Upload Admit Card
       </h2>
       <div className="">
         <label className="text-sm mb-2 block" htmlFor="roll_number">
@@ -49,10 +52,16 @@ function Result() {
 
       <div className="my-6">
         <div className="flex items-center space-x-2">
-          <label htmlFor="merit_uploader">
+          <label htmlFor="list_uploader">
             <div className="cursor-pointer flex items-center space-x-2 bg-secondary text-sm rounded-md shadow-md text-white p-2 px-6 w-max">
-              <RiFileExcel2Fill size={18} />
-              <span>Upload List</span>
+              {uploading ? (
+                "Please wait..."
+              ) : (
+                <>
+                  <RiFileExcel2Fill size={18} />
+                  <span>Upload List</span>
+                </>
+              )}
             </div>
           </label>
           <p className="blink">{file?.name}</p>
@@ -61,15 +70,15 @@ function Result() {
           onChange={(e) => setFile(e.target.files[0])}
           className="hidden"
           type="file"
-          id="merit_uploader"
+          id="list_uploader"
           accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         />
         <p className="text-xs mt-1">
-          * Please upload result list file in .xlsx format only
+          * Please upload admit card file in .xlsx format only
         </p>
       </div>
     </div>
   );
 }
 
-export default Result;
+export default AdmitCard;

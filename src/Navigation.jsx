@@ -10,6 +10,7 @@ import StudentPremierLeague from "@views/StudentPremierLeague";
 import Notification from "@views/Notification";
 import MeritList from "@views/MeritList";
 import Result from "@views/Result";
+import AdmitCard from "@views/AdmitCard";
 
 function Navigation() {
   return (
@@ -22,6 +23,7 @@ function Navigation() {
         <Route component={StudentPremierLeague} path="/premier-league" />
         <Route component={Notification} path="/notification" />
         <Route component={MeritList} path="/merit-list" />
+        <Route component={AdmitCard} path="/admit-card" />
         <Route component={Result} path="/result" />
         <Route component={Setting} path="/setting" />
       </Switch>
