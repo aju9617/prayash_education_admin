@@ -9,6 +9,8 @@ import * as notificationService from "./notification.service";
 import * as meritListService from "./meritList.service";
 import * as resultService from "./result.service";
 import * as admitCardService from "./admitCard.service";
+import * as examCenterService from "./examCenter.service";
+
 export {
   chargesService,
   authService,
@@ -21,4 +23,5 @@ export {
   meritListService,
   resultService,
   admitCardService,
+  examCenterService,
 };

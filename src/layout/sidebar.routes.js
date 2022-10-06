@@ -1,4 +1,4 @@
-import { MdDashboard, MdSecurity } from "react-icons/md";
+import { MdDashboard, MdSecurity, MdPlace } from "react-icons/md";
 import { AiFillDollarCircle, AiFillSetting } from "react-icons/ai";
 import { IoFastFoodSharp, IoDocumentText } from "react-icons/io5";
 import { IoMdAnalytics, IoMdFootball, IoMdNotifications } from "react-icons/io";
@@ -61,6 +61,12 @@ let routes = [
     path: "/admit-card",
     title: "Admit Card",
     icon: FaAddressCard,
+    submenu: [],
+  },
+  {
+    path: "/exam-center",
+    title: "Exam Center",
+    icon: MdPlace,
     submenu: [],
   },
   {

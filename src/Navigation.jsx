@@ -11,6 +11,7 @@ import Notification from "@views/Notification";
 import MeritList from "@views/MeritList";
 import Result from "@views/Result";
 import AdmitCard from "@views/AdmitCard";
+import ExamCenter from "./views/ExamCenter";
 
 function Navigation() {
   return (
@@ -24,6 +25,7 @@ function Navigation() {
         <Route component={Notification} path="/notification" />
         <Route component={MeritList} path="/merit-list" />
         <Route component={AdmitCard} path="/admit-card" />
+        <Route component={ExamCenter} path="/exam-center" />
         <Route component={Result} path="/result" />
         <Route component={Setting} path="/setting" />
       </Switch>
