@@ -12,7 +12,7 @@ import MeritList from "@views/MeritList";
 import Result from "@views/Result";
 import AdmitCard from "@views/AdmitCard";
 import ExamCenter from "./views/ExamCenter";
-
+import Gallery from "./views/Gallery";
 function Navigation() {
   return (
     <DashboardWrapper>
@@ -28,6 +28,7 @@ function Navigation() {
         <Route component={ExamCenter} path="/exam-center" />
         <Route component={Result} path="/result" />
         <Route component={Setting} path="/setting" />
+        <Route component={Gallery} path="/gallery" />
       </Switch>
     </DashboardWrapper>
   );

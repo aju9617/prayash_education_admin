@@ -10,6 +10,7 @@ import * as meritListService from "./meritList.service";
 import * as resultService from "./result.service";
 import * as admitCardService from "./admitCard.service";
 import * as examCenterService from "./examCenter.service";
+import * as galleryService from "./gallery.service";
 
 export {
   chargesService,
@@ -23,5 +24,6 @@ export {
   meritListService,
   resultService,
   admitCardService,
+  galleryService,
   examCenterService,
 };

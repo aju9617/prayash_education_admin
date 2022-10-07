@@ -1,8 +1,14 @@
-import { MdDashboard, MdSecurity, MdPlace } from "react-icons/md";
+import {
+  MdDashboard,
+  MdSecurity,
+  MdPlace,
+  MdInsertPhoto,
+} from "react-icons/md";
 import { AiFillDollarCircle, AiFillSetting } from "react-icons/ai";
 import { IoFastFoodSharp, IoDocumentText } from "react-icons/io5";
 import { IoMdAnalytics, IoMdFootball, IoMdNotifications } from "react-icons/io";
 import { IoNewspaper } from "react-icons/io5";
+
 import { HiReceiptTax } from "react-icons/hi";
 import { BsStarFill } from "react-icons/bs";
 import { GiPodiumWinner } from "react-icons/gi";
@@ -73,6 +79,12 @@ let routes = [
     path: "/notification",
     title: "Notification",
     icon: IoMdNotifications,
+    submenu: [],
+  },
+  {
+    path: "/gallery",
+    title: "Gallery",
+    icon: MdInsertPhoto,
     submenu: [],
   },
   // {
